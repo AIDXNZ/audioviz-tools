@@ -1,11 +1,12 @@
+from os import symlink
+import sys
 import librosa
 import soundfile as sf
 
 
 def run():
     
-    filename = input("please enter a file name:")
-    
+    filename = sys.argv[1]
     #cfile = convert(inputfile=filename, outputname=filename)
     
     # load converted WAV file

@@ -17,6 +17,12 @@ def doesExist():
     if importlib.util.find_spec("librosa") is None:
         subprocess.call([python_exe, "-m", "pip", "install", "librosa"])
         print("Downloading librosa through pip...")
+    if importlib.util.find_spec("libfmp") is None:
+        subprocess.call([python_exe, "-m", "pip", "install", "libfmp"])
+        print("Downloading librosa through pip...")
+    if importlib.util.find_spec("kivy") is None:
+        subprocess.call([python_exe, "-m", "pip", "install", "kivy"])
+        print("Downloading kivy through pip...")
     else: 
         print("Required imports already installed.")
 
